@@ -1,0 +1,42 @@
+@import url('normalize.css');
+
+.container{
+	width: 100%;
+	position: absolute;
+}
+.main{
+	text-align: center;
+	width: 100%;
+	margin: 0 auto 30px auto;
+	box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+}
+.clr{
+	clear: both;
+	padding: 0;
+	height: 0;
+	margin: 0;
+}
+.container > header{
+	margin: 10px;
+	padding: 20px 10px 10px 10px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.container > header h1{
+	font-size: 36px;
+	line-height: 40px;
+	margin: 0;
+	position: relative;
+	font-weight: 300;
+	color: #888;
+	padding: 5px 0px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+}
+
+.ie-note{
+	color: #ac375d;
+	display: none;
+	font-size: 15px;
+}

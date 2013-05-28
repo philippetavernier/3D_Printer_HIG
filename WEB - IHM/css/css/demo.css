@@ -1,0 +1,62 @@
+ 
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body {
+    font-weight: 300;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+}
+
+ 
+.container {
+	width: 100%;
+	position: relative;
+}
+
+.container.demo-1 {
+	height: 100%;
+	position: absolute;
+}
+
+.clr {
+	clear: both;
+	padding: 0;
+	height: 0;
+	margin: 0;
+}
+
+.main {
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.container > header,
+.content-wrapper {
+	padding: 30px;
+	width: 80%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.content-wrapper p{
+	padding-top: 30px;
+	line-height: 26px;
+}
+
+ 
