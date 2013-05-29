@@ -1,0 +1,25 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleEedomus" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleEedomus" scope="public">
+    <example>Yuri commande moteur X positive</example>
+    <tag>out.action=new Object(); </tag>
+    <item>Yuri procedure</item>
+    <one-of>
+      <item> d arret
+        <tag>out.action.MOTOR='S'</tag>
+      </item>
+     <item>retour
+        <tag>out.action.MOTOR='o'</tag>
+     </item>
+    </one-of>
+
+ <one-of>
+      <item>d urgence<tag>out.action.state=2</tag></item>
+      <item>total<tag>out.action.state=4</tag></item>
+      <item>origine<tag>out.action.state=5</tag></item>
+ </one-of>
+ 
+    <tag>out.action.action='MOTORS'</tag>
+	  <tag>out.action._attributes.threashold="0.80";</tag>
+    <tag>out.action._attributes.uri="http://192.168.0.29/yuri.php";</tag>
+  </rule>
+</grammar>

@@ -1,0 +1,23 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleEedomus" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleEedomus" scope="public">
+    <example>Yuri imprime moi un cube</example>
+    <tag>out.action=new Object(); </tag>
+    <item>Yuri</item>
+ <one-of>
+      <item>imprime<tag>out.action.state=0</tag></item>
+      <item>imprime moi<tag>out.action.state=0</tag></item>
+      <item>donne moi les instructions dimpression de lobjet<tag>out.action.state=1</tag></item>
+    </one-of>
+    <one-of>
+      <item>cube
+        <tag>out.action.type='CUBE'</tag>
+      </item>
+      <item>sphere
+        <tag>out.action.type='SPHAIRE'</tag>
+		</item>
+    </one-of>
+    <tag>out.action.action='PRINTER_MACRO'</tag>
+	  <tag>out.action._attributes.threashold="0.90";</tag>
+    <tag>out.action._attributes.uri="http://192.168.0.29/yuri.php";</tag>
+  </rule>
+</grammar>

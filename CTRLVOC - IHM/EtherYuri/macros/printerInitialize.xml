@@ -1,0 +1,19 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleTime" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleTime" scope="public">
+    <example>Yuri Initialise moi la connexion serie</example>
+    <tag>out.action=new Object(); </tag>
+      <one-of>
+      <item>Yuri initialise moi la liaison serie
+        <tag>out.action.init='initialize'</tag>
+      </item>
+      <item>Yuri relance moi l'interface
+        <tag>out.action.init='restart'</tag>
+      </item>
+    </one-of>
+	
+	
+    <tag>out.action.action='INITIALIZE_PRINTER'</tag>
+    <tag>out.action._attributes.uri="http://192.168.0.29/yuri.php";</tag>
+    <tag>out.action._attributes.threashold="0.90";</tag>
+  </rule>
+</grammar>

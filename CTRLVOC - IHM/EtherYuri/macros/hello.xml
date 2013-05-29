@@ -1,16 +1,17 @@
 <grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleTime" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
   <rule id="ruleTime" scope="public">
-    <example>Yuri redemarre la carte</example>
+    <example>Salut Yuri</example>
     <tag>out.action=new Object(); </tag>
     <one-of>
-      <item>Yuri redemarre la carte</item>
-      <item>Reboot la carte</item>
-      <item>Yuri redemarre rasp berry</item>
+      <item>Salutation Yuri</item>
+      <item>Bonjour Yuri</item>
+      <item>Bonsoir Yuri</item>
+      <item>Salut Yuri</item>
     </one-of>
 	
 	
-    <tag>out.action.action='REBOOT'</tag>
-    <tag>out.action._attributes.uri="http://127.0.0.1/yuri.php";</tag>
+    <tag>out.action.action='HELLO'</tag>
+    <tag>out.action._attributes.uri="http://192.168.0.29/yuri.php";</tag>
     <tag>out.action._attributes.threashold="0.90";</tag>
   </rule>
 </grammar>

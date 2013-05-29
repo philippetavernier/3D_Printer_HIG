@@ -1,0 +1,72 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleEedomus" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleEedomus" scope="public">
+    <example>Yuri commande moteur X positive</example>
+    <tag>out.action=new Object(); </tag>
+    <item>Yuri Commande moteur</item>
+    <one-of>
+      <item>arret
+        <tag>out.action.MOTOR='S'</tag>
+      </item>
+      <item>x
+        <tag>out.action.MOTOR='X'</tag>
+      </item>
+      <item>y
+        <tag>out.action.MOTOR='Y'</tag>
+     </item>
+     <item>z
+        <tag>out.action.MOTOR='Z'</tag>
+     </item>
+     <item>test
+        <tag>out.action.MOTOR='2'</tag>
+     </item>
+     <item>retour
+        <tag>out.action.MOTOR='o'</tag>
+     </item>
+    </one-of>
+
+ <one-of>
+      <item>avant<tag>out.action.state=1</tag></item>
+      <item>arriere<tag>out.action.state=0</tag></item>
+      <item>d urgence<tag>out.action.state=2</tag></item>
+      <item>general<tag>out.action.state=3</tag></item>
+      <item>total<tag>out.action.state=4</tag></item>
+      <item>origine<tag>out.action.state=5</tag></item>
+ </one-of>
+
+  <one-of>
+      <item>Deplacement par defaut<tag>out.action.multiplier=0</tag></item>
+      <item>Deplacement 1 pas<tag>out.action.multiplier=1</tag></item>
+      <item>Deplacement 10 pas<tag>out.action.multiplier=10</tag></item>
+      <item>Deplacement 20 pas<tag>out.action.multiplier=20</tag></item>
+      <item>Deplacement 30 pas<tag>out.action.multiplier=30</tag></item>
+      <item>Deplacement 40 pas<tag>out.action.multiplier=40</tag></item>
+      <item>Deplacement 50 pas<tag>out.action.multiplier=50</tag></item>
+      <item>Deplacement 60 pas<tag>out.action.multiplier=60</tag></item>
+      <item>Deplacement 70 pas<tag>out.action.multiplier=70</tag></item>
+      <item>Deplacement 80 pas<tag>out.action.multiplier=80</tag></item>
+      <item>Deplacement 90 pas<tag>out.action.multiplier=90</tag></item>
+      <item>Deplacement 100 pas<tag>out.action.multiplier=100</tag></item>
+      <item>Deplacement 200 pas<tag>out.action.multiplier=200</tag></item>
+      <item>Deplacement 300 pas<tag>out.action.multiplier=300</tag></item>
+      <item>Deplacement 400 pas<tag>out.action.multiplier=400</tag></item>
+      <item>Deplacement 500 pas<tag>out.action.multiplier=500</tag></item>
+      <item>Deplacement 600 pas<tag>out.action.multiplier=600</tag></item>
+      <item>Deplacement 700 pas<tag>out.action.multiplier=700</tag></item>
+      <item>Deplacement 800 pas<tag>out.action.multiplier=800</tag></item>
+      <item>Deplacement 900 pas<tag>out.action.multiplier=900</tag></item>
+      <item>Deplacement 1000 pas<tag>out.action.multiplier=1000</tag></item>
+      <item>Deplacement 1500 pas<tag>out.action.multiplier=1500</tag></item>
+      <item>Deplacement 2000 pas<tag>out.action.multiplier=2000</tag></item>
+      <item>Deplacement 2500 pas<tag>out.action.multiplier=1500</tag></item>
+      <item>Deplacement 3000 pas<tag>out.action.multiplier=3000</tag></item>
+      <item>Deplacement 3500 pas<tag>out.action.multiplier=3500</tag></item>
+      <item>Deplacement 4000 pas<tag>out.action.multiplier=4000</tag></item>
+ </one-of>
+ 
+
+
+    <tag>out.action.action='MOTORS'</tag>
+	  <tag>out.action._attributes.threashold="0.80";</tag>
+    <tag>out.action._attributes.uri="http://192.168.0.29/yuri.php";</tag>
+  </rule>
+</grammar>
